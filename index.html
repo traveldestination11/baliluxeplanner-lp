@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bali Luxe Planner</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#f8f5ef;
+      color:#222;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:80px 0;
+      background:
+      linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+      url('https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=2070&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:white;
+    }
+
+    .hero-content{
+      max-width:700px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#d4af37;
+      color:#111;
+      padding:8px 18px;
+      border-radius:30px;
+      font-size:14px;
+      font-weight:600;
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:58px;
+      line-height:1.1;
+      margin-bottom:24px;
+      font-weight:700;
+    }
+
+    .hero p{
+      font-size:20px;
+      margin-bottom:35px;
+      color:#f0f0f0;
+    }
+
+    /* PRICE */
+
+    .price-box{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      margin-bottom:35px;
+    }
+
+    .old-price{
+      font-size:28px;
+      text-decoration:line-through;
+      color:#ccc;
+    }
+
+    .new-price{
+      font-size:48px;
+      font-weight:700;
+      color:#d4af37;
+    }
+
+    .discount{
+      background:#d4af37;
+      color:#111;
+      padding:6px 14px;
+      border-radius:20px;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    /* BUTTON */
+
+    .btn{
+      display:inline-block;
+      background:#d4af37;
+      color:#111;
+      padding:18px 38px;
+      border-radius:50px;
+      font-size:18px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:white;
+      transform:translateY(-2px);
+    }
+
+    /* FEATURES */
+
+    .features{
+      padding:100px 0;
+      background:white;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#666;
+      max-width:700px;
+      margin:auto;
+    }
+
+    .features-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .feature-card{
+      background:#fafafa;
+      padding:35px;
+      border-radius:24px;
+      transition:0.3s;
+      border:1px solid #eee;
+    }
+
+    .feature-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .feature-icon{
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .feature-card h3{
+      margin-bottom:15px;
+      font-size:22px;
+    }
+
+    .feature-card p{
+      color:#666;
+      font-size:15px;
+    }
+
+    /* WHY */
+
+    .why{
+      padding:100px 0;
+      background:#111;
+      color:white;
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-top:50px;
+    }
+
+    .why-box{
+      background:#1b1b1b;
+      padding:35px;
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .why-box h3{
+      margin-bottom:15px;
+      color:#d4af37;
+    }
+
+    .why-box p{
+      color:#ccc;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:100px 0;
+      text-align:center;
+      background:#f8f5ef;
+    }
+
+    .cta h2{
+      font-size:48px;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      max-width:700px;
+      margin:auto;
+      margin-bottom:35px;
+      color:#555;
+      font-size:18px;
+    }
+
+    footer{
+      padding:30px;
+      text-align:center;
+      background:#111;
+      color:#999;
+      font-size:14px;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .new-price{
+        font-size:40px;
+      }
+
+      .section-title h2{
+        font-size:34px;
+      }
+
+      .cta h2{
+        font-size:36px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="badge">
+          AI-Powered Luxury Bali Planner
+        </div>
+
+        <h1>
+          Plan Your Perfect Bali Trip With AI
+        </h1>
+
+        <p>
+          Create personalized Bali itineraries in seconds with smart AI planning, luxury recommendations, realistic travel routes, and day-by-day trip organization.
+        </p>
+
+        <div class="price-box">
+          <div class="old-price">
+            $65
+          </div>
+
+          <div class="new-price">
+            $25
+          </div>
+
+          <div class="discount">
+            LIMITED OFFER
+          </div>
+        </div>
+
+        <a href="https://payhip.com/b/ROrNZ" class="btn" target="_blank">
+          Buy Now
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+
+  <section class="features">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Travelers Love Bali Luxe Planner</h2>
+
+        <p>
+          A premium AI travel planner designed to make Bali travel easier, smarter, and more luxurious.
+        </p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Personalized Itinerary</h3>
+          <p>
+            Generate custom Bali travel plans based on your travel style, budget, and trip duration.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>Smart Route Planning</h3>
+          <p>
+            Avoid wasting time with realistic travel routes optimized for Bali traffic and locations.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏝️</div>
+          <h3>Luxury Recommendations</h3>
+          <p>
+            Discover curated villas, beach clubs, restaurants, and premium Bali experiences.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Day-by-Day Planning</h3>
+          <p>
+            Organize your Bali adventure with simple and structured daily itineraries.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Mobile Friendly</h3>
+          <p>
+            Access your itinerary anytime on mobile, tablet, or desktop with a clean user experience.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Save Hours of Research</h3>
+          <p>
+            Skip endless Google searches and let AI instantly build your Bali trip for you.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHY -->
+
+  <section class="why">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>More Than Just A Travel Planner</h2>
+
+        <p>
+          Bali Luxe Planner combines AI technology with Bali travel expertise to create smarter and more realistic itineraries.
+        </p>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-box">
+          <h3>Designed For Real Bali Travel</h3>
+          <p>
+            Avoid unrealistic itineraries with better route organization and practical travel timing.
+          </p>
+        </div>
+
+        <div class="why-box">
+          <h3>Luxury Bali Experience</h3>
+          <p>
+            Perfect for honeymoon trips, couples, luxury travelers, digital nomads, and premium vacations.
+          </p>
+        </div>
+
+        <div class="why-box">
+          <h3>Fast & Easy Planning</h3>
+          <p>
+            Create your Bali trip in minutes instead of spending hours researching destinations manually.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Unlock Your Perfect Bali Trip Today
+      </h2>
+
+      <p>
+        Get instant access to Bali Luxe Planner and start creating smarter, personalized, and luxury Bali itineraries with AI.
+      </p>
+
+      <div class="price-box" style="justify-content:center;">
+        <div class="old-price">$65</div>
+        <div class="new-price">$25</div>
+      </div>
+
+      <a href="https://payhip.com/b/ROrNZ" class="btn" target="_blank">
+        Buy Now
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Bali Luxe Planner — AI-Powered Bali Travel Planning
+  </footer>
+
+</body>
+</html>
